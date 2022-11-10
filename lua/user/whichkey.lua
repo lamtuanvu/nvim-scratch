@@ -181,6 +181,21 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  v = { "<cmd>vsplit<cr>", "Vertical Split"},
+  V = { "<cmd>split<cr>", "Horizontal Split"}
+
+  -- o = {
+  --   name = "Github Octo",
+  --   i = {
+  --     name = "Issue",
+  --     c = {"Close Issue"},
+  --     o = {"Reopen Issue"},
+  --     l = {"List Issues"},
+  --
+  --   }
+  --
+  -- }
 }
 
 which_key.setup(setup)
