@@ -119,6 +119,25 @@ return packer.startup(function(use)
 		"github/copilot.vim",
 	})
 
+	-- markdown
+	use({ "ellisonleao/glow.nvim" })
+
+	-- DAP
+	use({
+		"mfussenegger/nvim-dap",
+	})
+
+	use({
+		"theHamsta/nvim-dap-virtual-text",
+		requires = {
+			"mfussenegger/nvim-dap",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+  use({"APZelos/blamer.nvim"})
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
